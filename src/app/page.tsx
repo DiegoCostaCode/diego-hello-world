@@ -2,40 +2,47 @@
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col justify-center items-center h-screen">
-
-        <section className="flex items-center">
+      <main className="flex flex-col justify-center items-center h-screen bg-[#] ">
+        <div className="mt-[150px] mb-[150px]">
+          <section className="flex items-center h-[500px]">
           <div className="pr-5">
-            <img src="/photo1.png" alt="Foto Diego Costa" className="rotate-[-3deg] hover:rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800 w-[300px] transition-all shadow-xl" />
+            <img 
+              src="/photo1.png" alt="Foto Diego Costa" className=" rotate-[-3deg] hover:rotate-3 rounded-2xl w-[300px] transition-all shadow-xl" />
+
+              <p className="shadow-xl w-[300px] text-[15px] mt-2.5 animate-bounce" >
+                <a href="https://www.youtube.com/watch?v=_ksnxNfrKrw">
+                <strong>"No force of nature can break your will to self motivate"</strong> ~Michael Jackson
+                </a>
+              </p>
           </div>
 
-          <div>
-            <h1 className="text-6xl drop-shadow-glow">Bem-vindo(a)!</h1>
-          </div>
-        </section>
+            <div>
+              <h1 className="text-6xl drop-shadow-glow">Bem-vindo(a)!</h1>
+            </div>
+          </section>
 
-        <article className="mt-[30px] text-justify w-[700px] text-[#a1a1aa]" >
-          <p >
-            Estudante e desenvolvedor full-stack, ou seja, auto tanto no backend, quanto no frontend. Curso Análise e Desenvolvimento de Sistemas na <a href="https://www.fiap.com.br/institucional/" className="font-bold text-[#fefefe] drop-shadow-glow">FIAP</a> -
-            bolsa integral. E, estou no último semestre, termino este ano de 2025, Agosto. <a className="font-bold text-[#fefefe] drop-shadow-glow ">Sou uma pessoa dedicada, criativa e comunicativa.</a>
-            
-          </p>
-
+          <article className=" text-justify w-[700px] text-[#a1a1aa] text-base " >
           <p>
-              Tenho conhecimento e experiência com Python com Flask e Pandas, Matplotlib e entre outras libs. Também, em  Java, com Spring bott, JPA e Hibernate PL/SQL.
-              Além de modelagem de banco de dados relacionais e não relacionais. Me sinto muito à vontade com frontend, foi o que me trouxe para área de T.I, e posteiormente peguei gosto pelo restante das coisa.
-              Desenvolvo em Next.js ou Angular, gosto de utilizar TailwindCss.
+            <strong>Estudante e desenvolvedor full-stack</strong> cursando Análise e Desenvolvimento de Sistemas na 
+            <a href="https://www.fiap.com.br/institucional/" className="font-bold text-[#fefefe] drop-shadow-glow"> FIAP </a> 
+            (bolsa integral) – último semestre, concluindo em agosto.
           </p>
 
-          <p>
-              Atualmente faço um estágio na Vivo, maior operadora de internet no Brasil. Faço parte de um time de desenvolvimento de projetos internos, automações que vão do backend ao frontend.
-              Utilizamos Python (OOP), MongoDb ou MySql para banco de dados, e Angular para frontend. Em 2023, já colaborei com a maior empresa de entretenimento do mundo, a Disney, porém em Administração.
-              Entretanto, foi um experiência incrível, e que me trouxe muitos aprendizados, como: Análise de Dados, Apresentação de dados em reuniões, Organização e Senso de urgência.
-  
+          <p className="mt-7">
+            <strong className=" text-[#fefefe] drop-shadow-glow">Sou dedicado, criativo e comunicativo</strong>, com experiência em <strong className=" text-[#fefefe] drop-shadow-glow">Python</strong> (Flask, Pandas, Matplotlib, etc.), 
+            <strong className=" text-[#fefefe] drop-shadow-glow">Java</strong> (Spring Boot, JPA, Lombok, etc.). Também tenho conhecimento sólido em <strong className=" text-[#fefefe] drop-shadow-glow">bancos relacionais (PL/SQL) e não relacionais</strong>. 
+            Comecei no front, minha porta de entrada na TI, e é meu lugar de paz, adoro criar interfaces minimalistas, intuitivas, com <strong className=" text-[#fefefe] drop-shadow-glow">Next.js, Angular, TailwindCSS, e até CSS puro.</strong>
           </p>
 
-        </article>
+          <p className="mt-7">
+            Atualmente, estou estagiando na Vivo, desenvolvendo soluções internas de ponta a ponta: backend em Python, bancos 
+            (MongoDB/MySQL) e frontend em Angular. Em 2023, tive o privilégio de trabalhar na The Walt Disney Company – uma experiência enriquecedora 
+            que me ensinou análise de dados, apresentações e senso de urgência.
+          </p>
 
+
+          </article>
+        </div>
       </main>
     </>
   );

@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      dropShadow: {
+        'glow': '0 35px 35px rgba(255, 255, 255, 0.5)',
+      },
     },
   },
   plugins: [],

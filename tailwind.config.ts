@@ -11,6 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'white': '#ffffff',
+        'black': '#181818',	
+        'dark-gray': '#181818',
+        'soft-black': '#121212'
       },
       dropShadow: {
         'glow': '0 35px 35px rgba(255, 255, 255, 0.5)',

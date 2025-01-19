@@ -1,47 +1,62 @@
+import ButtonTier1 from "./components/button/button-tier-1";
+import ButtonTier2 from "./components/button/button-tier-2";
 
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col justify-center items-center h-screen bg-[#] ">
-        <div className="mt-[150px] mb-[150px]">
-          <section className="flex items-center h-[500px]">
-          <div className="pr-5">
-            <img 
-              src="/photo1.png" alt="Foto Diego Costa" className=" rotate-[-3deg] hover:rotate-3 rounded-2xl w-[300px] transition-all shadow-xl" />
+      <main className="flex flex-col justify-center items-center h-full w-full">
 
-              <p className="shadow-xl w-[300px] text-[15px] mt-2.5 animate-bounce" >
-                <a href="https://www.youtube.com/watch?v=_ksnxNfrKrw">
-                <strong>"No force of nature can break your will to self motivate"</strong> ~Michael Jackson
-                </a>
-              </p>
-          </div>
+        <div className="flex flex-col justify-start w-[120vh] px-20 bg-soft-black">
 
-            <div>
-              <h1 className="text-6xl drop-shadow-glow">Bem-vindo(a)!</h1>
-            </div>
+          <section className="flex flex-col items-center justify-end h-[55vh] mb-10 w-[700px]">
+
+              <div className="flex w-full space-x-5">
+
+                <div className="flex-[10]">
+                  <h1 className="text-5xl font-bold drop-shadow-glow">Bem-vindo(a)!</h1>
+                  
+                  <h3 className="text-justify text-lg my-6 text-zinc-400 ">Me chamo <strong className="text-zinc-200">Diego Costa Silva</strong>, um estudante e desenvolvedor full-stack. Atualmente
+                    sou estagiário na <strong className="text-zinc-200">Vivo Telefônica</strong>, onde desenvolvo softwares do back ao front-end, focados em melhorar os processos internos.
+                  </h3>
+                </div>
+
+                <div className="flex justify-center items-center flex-auto drop-shadow-lg">
+                  <img src="photo1.png"  className="aspect-square rotate-[-3deg] hover:rotate-3 rounded-2xl w-[250px] transition-all shadow-xl"/>
+                </div>
+                
+              </div>
+              
           </section>
 
-          <article className=" text-justify w-[700px] text-[#a1a1aa] text-base " >
-          <p>
-            <strong>Estudante e desenvolvedor full-stack</strong> cursando Análise e Desenvolvimento de Sistemas na 
-            <a href="https://www.fiap.com.br/institucional/" className="font-bold text-[#fefefe] drop-shadow-glow"> FIAP </a> 
-            (bolsa integral) – último semestre, concluindo em agosto.
-          </p>
+          <div className="flex flex-col mt-20 h-screen">
 
-          <p className="mt-7">
-            <strong className=" text-[#fefefe] drop-shadow-glow">Sou dedicado, criativo e comunicativo</strong>, com experiência em <strong className=" text-[#fefefe] drop-shadow-glow">Python</strong> (Flask, Pandas, Matplotlib, etc.), 
-            <strong className=" text-[#fefefe] drop-shadow-glow">Java</strong> (Spring Boot, JPA, Lombok, etc.). Também tenho conhecimento sólido em <strong className=" text-[#fefefe] drop-shadow-glow">bancos relacionais (PL/SQL) e não relacionais</strong>. 
-            Comecei no front, minha porta de entrada na TI, e é meu lugar de paz, adoro criar interfaces minimalistas, intuitivas, com <strong className=" text-[#fefefe] drop-shadow-glow">Next.js, Angular, TailwindCSS, e até CSS puro.</strong>
-          </p>
+            <section className="w-full">
+                <h1 className="text-6xl w-64 text-justify drop-shadow-glow">Dedicado, criativo & comunicativo.</h1>
+           
+                <p className="text-lg text-justify text-wrap my-6 text-zinc-400 w-[700px]">
+                    Atualmente, estou no último semestre do curso de Análise e Desenvolvimento de Sistemas na 
+                    <a href="https://www.fiap.com.br/2012/12/12/fiap-e-classificada-pelo-2-ano-consecutivo-no-grupo-de-excelencia-do-ensino-superior-do-pais-segundo-dados-do-mec/#:~:text=FIAP%20é%20classificada%20pelo%202º,País%2C%20segundo%20dados%20do%20MEC&text=O%20Ministério%20da%20Educação%20(MEC,FIAP%20por%20mais%20essa%20conquista!" className="text-white animate-pulse"> FIAP</a>, com previsão de formatura para agosto deste ano. Minha média de notas até o momento é <strong className="text-white">8,24</strong>.
+                </p>
 
-          <p className="mt-7">
-            Atualmente, estou estagiando na Vivo, desenvolvendo soluções internas de ponta a ponta: backend em Python, bancos 
-            (MongoDB/MySQL) e frontend em Angular. Em 2023, tive o privilégio de trabalhar na The Walt Disney Company – uma experiência enriquecedora 
-            que me ensinou análise de dados, apresentações e senso de urgência.
-          </p>
+                <p className="text-lg text-justify text-wrap my-6 text-zinc-400 w-[700px]">
+                    Tenho experiência em <u>Python</u>, incluindo programação orientada a objetos, análise de dados, Inteligência Artificial, Web Scraping e desenvolvimento de APIs com <u>Flask</u>. 
+                    Além disso, também trabalho com <u>Java</u> para criação de APIs, utilizando o <u>Spring Boot</u>, <u>JPA</u>, <u>Lombok</u>. Tenho conhecimento sólido em bancos de dados relacionais e não relacionais, 
+                    com habilidades em modelagem e criação de queries complexas, incluindo o uso de procedures e functions. 
+                    No frontend, sou capaz de criar interfaces modernas e intuitivas utilizando <u>Next.js</u> e <u>Angular</u>.
+                </p>
 
+                <p className="text-lg text-justify text-wrap my-6 text-zinc-400 w-[700px]">
+                    Estou sempre em busca de novos conhecimentos, estudando tecnologias emergentes e aprimorando as ferramentas e práticas que já domino.
+                </p>
 
-          </article>
+            </section>
+
+            <div className="flex space-x-2 mt-10">
+              <ButtonTier1 title="Projetos" href="/projetos" />
+              <ButtonTier2 title="Trajetória" href="/meet-diego" />
+            </div>
+          </div>
+
         </div>
       </main>
     </>

@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        fira: ['"Fira Code"', 'monospace'],
+        roboto: ['Roboto', 'sans-serif'], 
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

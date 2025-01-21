@@ -1,56 +1,84 @@
+'use client';
+
+import { usePathname } from "next/navigation";
+
 export default function Page() {
+
+  const router = usePathname();
+
   return (
     <>
-      <main className="flex flex-col justify-center items-center h-full w-full">
+      <main className="flex justify-center items-center h-full w-full">
 
-        <div className="flex flex-col w-[110vh] h-auto px-20 bg-soft-black border-x-2 border-dark-gray">
+      
+
+        <nav className="py-10 fixed top-40 left-14 w-50 h-full">
+          <hr className="border-1 border-dark-gray mb-4" />
+            <h1 className="text-lg font-bold mb-5">Senta que lá vem história.</h1>
+            <ul className="list-disc list-inside text-lg text-zinc-300">
+              <li>
+                <a href="#introducao" className="hover:text-white">Eu, Diego🙋‍♂️</a>
+              </li>
+              <li>
+                <a href="#inicio-carreira" className="hover:text-white">Início da Carreira📍</a>
+              </li>
+              <li>
+                <a href="#disney" className="hover:text-white">Disney🏰🐭</a>
+              </li>
+              <li>
+                <a href="#faculdade" className="hover:text-white">Faculdade e Aprendizado💻</a>
+              </li>
+              <li>
+                <a href="#vivo" className="hover:text-white">Estágio na Vivo👾</a>
+              </li>
+              <li>
+                <a href="#objetivo" className="hover:text-white">Objetivo Pessoal🚀</a>
+              </li>
+            </ul>
+          <hr className="border-1 border-dark-gray mt-4" />
+        </nav>
+
+        <div className="flex flex-col w-[110vh] h-auto px-20 bg-soft-black border-x-2 border-dark-gray scroll-smooth">
 
           <section className="flex flex-col items-center justify-end h-auto mb-10 max-w-3xl">
 
             <div className="flex flex-col w-full space-x-5">
 
-              <div className="flex flex-col justify-center items-center py-20">
-
-                <div className="w-full mb-5">
-                  <h1 className="text-5xl font-bold drop-shadow-glow text-left">Trajetória</h1>
-                </div>
+              <div className="flex flex-col justify-center items-center my-20">
 
                 <div className="flex-[10]">
-                  <h3 className="text-3xl font-bold ">Meet Diego Costa</h3>
-                  <p className="text-justify text-lg my-6 text-zinc-300 ">
-                    Atualmente, sou estagiário na Vivo, desenvolvendo automações para a área de engenharia. Estou envolvido
-                     em projetos críticos, como a criação de sistemas de monitoramento e automação de processos, que impactam diretamente
-                      a infraestrutura de telecomunicações do Brasil. Mas, que tal conhecer um pouco mais sobre mim?
+                  <h1 className="text-5xl font-bold ">Meet Diego Costa</h1>
+
+                  <p id="introducao" className="text-justify text-lg my-6 text-zinc-300 scroll-mt-72">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum sequi nam laboriosam cumque esse vel cum. Explicabo ipsum nobis ipsam ad, nemo atque quas distinctio magnam ipsa minima dignissimos quisquam!
                   </p>
-                  <p className="text-justify text-lg my-6 text-zinc-300 ">
-                    Eu tenho 19 anos, nascido e criado em São Paulo, com raízes familiares em Minas Gerais e Pernambuco. Minas era o paraíso em minhas férias escolares.
-                     Como todos pais que presam pelo futuro de seu filho, eu sempre fui incentivado a estudar, eu entendi a mensagem cedo, e me mantive resiliente. Meu primeiro 
-                     contato técnico com tecnologia aconteceu aos 12 anos, 2016, através de um curso de informática básica. Foi o portal que me introduziu a este mundo, eu tive
-                     fundametos de hardware e pacote office.
+
+                  <p className="text-justify text-lg my-6 text-zinc-300">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, atque vero impedit reiciendis optio aliquam, nemo eaque, iure enim itaque asperiores earum distinctio ut tempora eos quas similique laborum libero?
                   </p>
-                  <p className="text-justify text-lg my-6 text-zinc-300 ">
-                    Aos 15, embarquei em um curso de Administração no Instituto Nossa Senhora de Fátima, onde posteriormente, também me dediquei ao aprendizado de inglês. Durante 
-                    esse período, trabalhei como estagiário em uma empresa de logística e comecei a explorar o mundo da programação, com foco em Frontend, devido à minha afinidade com
-                     design e arte.
+
+                  <p id="inicio-carreira" className="text-justify text-lg my-6 text-zinc-300 scroll-mt-64">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad deleniti, vitae eaque delectus, consequuntur consectetur tempora reprehenderit natus porro exercitationem temporibus, dolorem impedit voluptatem? Recusandae officia quas quam sapiente qui!  
                   </p>
-                  <p className="text-justify text-lg my-6 text-zinc-300 ">
-                    Minha jornada profissional deu um salto quando entrei no programa de Aprendizagem da Disney. Trabalhar na maior empresa de entretenimento do mundo foi uma experiência 
-                    transformadora. Aprendi sobre o mundo corporativo, marketing, análise de dados e apresentação de resultados. Fui responsável pelo pipeline de vendas e pela gestão de 
-                    incentivos a empresas parceiras.
+
+                  <p className="text-justify text-lg my-6 text-zinc-300">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, maiores eveniet. Quas quisquam, sapiente excepturi laudantium odio magni tenetur aliquid et explicabo, ipsa ab nam ipsum recusandae eligendi nobis nulla. 
                   </p>
-                  <p className="text-justify text-lg my-6 text-zinc-300 ">
-                    Em paralelo, finalizei o ensino médio e foquei no Enem, sabenndo que uma faculdade seria um passo importante. Naquele momento eu já sabia que iria fazer T.I, e em 2023, conquistei 
-                    uma vaga na FIAP em Análise e Desenvolvimento de Sistemas. Durante a faculdade, me envolvi profundamente, aprendendo tecnologias como Python, Java, Next.js, Docker e muito mais. Trabalhei em soluções 
-                    reais para empresas como Salesforce e SAP, o que consolidou minha paixão por desenvolvimento. A curva de aprendizado foi gigantesca.
+
+                  <p id="disney" className="text-justify text-lg my-6 text-zinc-300 scroll-mt-64">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel quo iste, atque consequatur repellat amet reiciendis, cumque commodi dolor eum cum aliquam quis ex at itaque suscipit consectetur magnam maxime!  
                   </p>
-                  <p className="text-justify text-lg my-6 text-zinc-300 ">
-                    Posteriormente, enquanto eu trabalhava na Disney e estudava, eu estava insatisfeito em não trabalhar com aquilo que estudava e me dedicada. Eu queria me dedicar 100% do meu dia naquiilo que eu amava, e queria
-                    crescer. E assim que finalizei o programa de aprendizagem, ingressei na Vivo. E tem sido sensacional. É muito importante o contato profissional, existe mais a se fazer, é onde você é realmente testado e desafiado.
+
+                  <p id="faculdade" className="text-justify text-lg my-6 text-zinc-300 scroll-mt-72">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, perspiciatis! Facere pariatur deserunt officiis itaque fuga aliquam, officia assumenda deleniti quis eaque voluptatum fugiat impedit reprehenderit alias saepe consequuntur dolores?
                   </p>
-                  
-                  <p className="text-justify text-lg my-6 text-zinc-300 ">
-                    Meu objetivo é continuar crescendo, empreender e criar soluções que mudem vidas, especialmente para minha família e meu irmão mais novo, que é minha maior inspiração.
-                     Se quiser saber mais ou bater um papo, fique à vontade para entrar em contato comigo. Obrigado!
+
+                  <p id="vivo" className="text-justify text-lg my-6 text-zinc-300 scroll-mt-80">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta consequatur suscipit inventore totam assumenda aspernatur. Ex soluta odio, vitae nisi natus ut quia est cupiditate quibusdam fuga eveniet ducimus! Consequuntur.  
+                  </p>
+
+                  <p id="objetivo" className="text-justify text-lg my-6 text-zinc-300 scroll-mt-96">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia fugiat vero reiciendis. Rem commodi provident neque blanditiis minus reprehenderit ipsum, repellendus ratione ab in omnis, praesentium assumenda iusto, dolorem accusamus.
                   </p>
                 </div>
 
@@ -58,6 +86,8 @@ export default function Page() {
             </div>
             
           </section>
+
+          
 
         </div>
       </main>

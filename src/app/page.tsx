@@ -42,7 +42,7 @@ export default function Home() {
            
                 <p className="text-lg text-justify text-wrap my-6 text-zinc-300 w-[700px]">
                     Atualmente, estou no último semestre do curso de Análise e Desenvolvimento de Sistemas na 
-                    <a href="https://www.fiap.com.br/2012/12/12/fiap-e-classificada-pelo-2-ano-consecutivo-no-grupo-de-excelencia-do-ensino-superior-do-pais-segundo-dados-do-mec/#:~:text=FIAP%20é%20classificada%20pelo%202º,País%2C%20segundo%20dados%20do%20MEC&text=O%20Ministério%20da%20Educação%20(MEC,FIAP%20por%20mais%20essa%20conquista!" className="text-white animate-pulse"> FIAP</a>, com previsão de formatura para agosto deste ano. Minha média de notas até o momento é <strong className="text-white">8,24</strong>.
+                    <a href="https://www.fiap.com.br/2012/12/12/fiap-e-classificada-pelo-2-ano-consecutivo-no-grupo-de-excelencia-do-ensino-superior-do-pais-segundo-dados-do-mec/#:~:text=FIAP%20é%20classificada%20pelo%202º,País%2C%20segundo%20dados%20do%20MEC&text=O%20Ministério%20da%20Educação%20(MEC,FIAP%20por%20mais%20essa%20conquista!" className="text-sky-500 animate-pulse font-bold"> FIAP</a>, com previsão de formatura para agosto deste ano. Minha média de notas até o momento é <strong className="text-white">8,24</strong>.
                 </p>
 
                 <p className="text-lg text-justify text-wrap my-6 text-zinc-300 w-[700px]">

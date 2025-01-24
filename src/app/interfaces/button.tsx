@@ -1,4 +1,4 @@
 interface button {
-    title: string;
+    title: string | undefined;
     href: string | undefined;
   }

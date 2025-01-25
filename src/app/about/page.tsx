@@ -1,10 +1,16 @@
 'use client';
 
-import { usePathname } from "next/navigation";
+import clsx from "clsx";
+import { useState } from "react";
 
 export default function Page() {
 
-  const router = usePathname();
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  const handleSectionClick = (id: string) => {
+    setActiveSection(id);
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
 
   return (
     <>
@@ -14,22 +20,22 @@ export default function Page() {
             <h1 className="text-lg font-bold mb-5">Senta que lá vem história.</h1>
             <ul className="list-disc list-inside text-lg text-zinc-300 ">
               <li className="hover:-translate-x-[-1rem] hover:scale-110  transition-all delay-200">
-                <a href="#introducao" className="hover:text-white ">Eu, Diego🙋‍♂️</a>
+                <button onClick={() => handleSectionClick("introducao")} className="hover:text-white" >Eu, Diego🙋‍♂️</button>
               </li>
               <li className="hover:-translate-x-[-1rem] hover:scale-110  transition-all delay-200">
-                <a href="#inicio-carreira" className="hover:text-white">Início da Carreira📍</a>
+                <button onClick={() => handleSectionClick("inicio-carreira")} className="hover:text-white" >Início da Carreira📍</button>
               </li>
               <li className="hover:-translate-x-[-1rem] hover:scale-110  transition-all delay-200">
-                <a href="#disney" className="hover:text-white">Disney🏰🐭</a>
+                <button onClick={() => handleSectionClick("disney")} className="hover:text-white" >Disney🏰🐭</button>
               </li>
               <li className="hover:-translate-x-[-1rem] hover:scale-110  transition-all delay-200">
-                <a href="#faculdade" className="hover:text-white">Faculdade e Aprendizado💻</a>
+                <button onClick={() => handleSectionClick("tecnologias")} className="hover:text-white" >Faculdade e Aprendizado💻</button>
               </li>
               <li className="hover:-translate-x-[-1rem] hover:scale-110  transition-all delay-200">
-                <a href="#vivo" className="hover:text-white">Estágio na Vivo👾</a>
+                <button onClick={() => handleSectionClick("vivo")} className="hover:text-white" >Estágio na Vivo👾</button>
               </li>
               <li className="hover:-translate-x-[-1rem] hover:scale-110  transition-all delay-200">
-                <a href="#objetivo" className="hover:text-white">Objetivo Pessoal🚀</a>
+                <button onClick={() => handleSectionClick("conclusao")} className="hover:text-white" >Objetivo Pessoal🚀</button>
               </li>
             </ul>
           <hr className="border-1 border-dark-gray mt-4" />
@@ -41,53 +47,50 @@ export default function Page() {
 
             <div className="flex flex-col w-full space-x-5">
 
-              <div className="flex flex-col justify-center items-center my-20">
+              <div className="flex flex-col justify-center items-center my-56">
 
                 <div className="flex-[10]">
-                  <h1 className="text-5xl font-bold ">Meet Diego Costa</h1>
+                  <h1 className="text-5xl font-bold drop-shadow-glow">Meet Diego Costa</h1>
 
                   <div className="flex flex-col text-justify text-lg text-zinc-300 space-y-4 mt-4">
-                    <p id="introducao" className="scroll-mt-72 hover:leading-loose hover:scale-105 hover:font-medium transition-all">
-                      Eu nasci e fui criado aqui em São Paulo - zona sul. Tenho 19 anos, e sou o irmão mais velho. Tenho raízes familiares
-                      por parte de pai, em Minas Gerais, e em Pernambuco, por parte de mãe. Dedicação, criatividade, e resiliência são 
-                      caracteristicas que me definem desde que me entendo por gente.
+
+                    <p id="introducao" className={clsx(" hover:leading-loose hover:scale-105 hover:font-medium transition-all", activeSection === 'introducao' && 'animate-blink-once')}>
+                      Nasci e cresci na zona sul de São Paulo. Sou uma pessoa tranquila, focada em meus objetivos e apaixonado por aprender
+                      coisas novas. Desde cedo, a tecnologia despertava minha curiosidade, e sempre quis entender como as coisas funcionam. 
+                      Nos meus momentos livres, gosto de caminhar ao ar livre, ouvir uma boa música, assistir a filmes ou séries e, às vezes,
+                      mergulhar em uma leitura.
                     </p>
 
-                    <p className="hover:leading-loose hover:scale-105 hover:font-medium transition-all">
-                      No tempo livre, gosto de caminhar ao ar livre, ouvir uma boa música, assistir filmes e séries e as vezes jogar.
+                    <p id="inicio-carreira" className={clsx(" hover:leading-loose hover:scale-105 hover:font-medium transition-all", activeSection === 'inicio-carreira' && 'animate-blink-once ')}>
+                      <strong>Minha jornada não começou na T.I</strong>. Em 2021, iniciei um curso técnico em Administração e 
+                      trabalhei como freelancer de ilustrações digitais <a href="https://www.instagram.com/firtz_dzn/" className="text-sky-500 animate-pulse font-bold">(visualizar)</a>  - uma experiência muito marcante. No ano seguinte, concluí um curso completo de inglês na mesma instituição, 
+                      do básico ao avançado, enquanto começava a explorar o universo do Frontend. Algo me dizia que era o caminho certo.
                     </p>
 
-                    <p id="inicio-carreira" className="hover:leading-loose hover:scale-105 hover:font-medium transition-all">
-                      Minha carreira teve mudanças importantes. Em 2021, comecei um curso de administração no Instituto Nossa Senhora de Fátima. Neste período
-                      mantive uma página no Instagram de ilustração digital <a href="/projetos#vivo" className="text-sky-500 animate-pulse font-bold">(visualizar)</a>. Em 2022, iniciei um curso de inglês de 2 anos na mesma instituição, do básico ao avançado.
+                    <p id="disney" className={clsx("hover:leading-loose hover:scale-105 hover:font-medium transition-all", activeSection === 'disney' && 'animate-blink-once ')}>
+                      Em 2023, fui contratado como Aprendiz na <a href="https://www.linkedin.com/feed/update/urn:li:activity:7060409859858472960/?originalSubdomain=pt" className="text-sky-500 animate-pulse font-bold">The Walt Disney Company</a>. Não era ainda na área de tecnologia, mas foi um período transformador. 
+                      Aprendi sobre análise de dados, apresentação de resultados e o funcionamento do mundo corporativo. Pouco tempo depois, consegui uma bolsa 
+                      de estudos na FIAP em Análise e Desenvolvimento de Sistemas, graças às minhas notas no Enem. E foi aí que mergulhei de cabeça em programação.
                     </p>
 
-                    <p className="hover:leading-loose hover:scale-105 hover:font-medium transition-all">
-                       Durante o curso, consegui um estágio como auxiliar administrativo. Foi um período desafiador: era inglês de manhã, estágio no Luz à tarde, e ensino médio à 
-                       noite. De um lugar ao outro direto. Mas foi edificante, conquistei muita coisas e aprendi muito.
+                    <p id="tecnologias" className={clsx(" hover:leading-loose hover:scale-105 hover:font-medium transition-all", activeSection === 'tecnologias' && 'animate-blink-once ')}>
+                      Desenvolvi aplicações completas desde o início do curso, enfrentando desafios reais propostos por empresas como <strong><u>SAP, Salesforce, Odontoprev, entre outras</u></strong>. Aprendi a criar 
+                      APIs RESTful com Java e Spring Boot, desenvolver aplicativos em Kotlin e automatizar processos com Python. Trabalhei com banco de dados Oracle, 
+                      criei projetos web com Next.js e explorei metodologias ágeis, Docker e Azure. Foi um período desafiador, mas gratificante, que confirmou que estava 
+                      no caminho certo.
                     </p>
 
-                    <p id="disney" className="hover:leading-loose hover:scale-105 hover:font-medium transition-all">
-                      Em 2023, minha vida mudou: fui contratado como aprendiz na Disney, a maior empresa de entretenimento do mundo. E nesse mesmo ano, conquistei uma 
-                      bolsa integral na FIAP com meu desempenho no Enem. Foi um divisor de águas, onde provei minha capacidade e quanndo bati o martelo que iria mudar para
-                      T.I.
+                    <p id="vivo" className={clsx("hover:leading-loose hover:scale-105 hover:font-medium transition-all", activeSection === 'vivo' && 'animate-blink-once ')}>
+                      Após meu período na Disney, comecei a estagiar na <a href="https://www.linkedin.com/feed/update/urn:li:activity:7236387467707199488/" className="text-sky-500 animate-pulse font-bold">Vivo Telefônica</a>, onde pude aplicar tudo o que aprendi. Estou trabalhando em projetos significativos, como o 
+                      de Controle de KPI, para monitoramento de rede, encontro de inconcistências no sistema, e automatização de processos. E outro de Yellow Belt, atuando
+                      na criação de um pipeline de deploy, utilizando as ferramentas do Git e Jenkins.
                     </p>
 
-                    <p id="faculdade" className="hover:leading-loose hover:scale-105 hover:font-medium transition-all">
-                      Na FIAP, mergulhei de cabeça nos estudos, pois sempre quis ser um excelente programador e sabia que essa oportunidade era única. Eu sonhava com a FIAP, não iria desperfiçar. Foi onde soube definitivamentne de que era de tecnologia/desenvolvimento que 
-                      eu amava fazer. Tive a oportunidade de desenvolvedor projetos com grandes empresas, como SAP, Salesforce, OdontoPrev, etc. <a href="/projetos#fiap" className="text-sky-500 animate-pulse font-bold">(visualizar)</a>
-                      </p>
-
-                    <p id="vivo" className="hover:leading-loose hover:scale-105 hover:font-medium transition-all">
-                      Em 2024, finalizei meu incrível período na Disney, que me ensinou muito sobre o mundo corporativo, análise de dados, apresentação de resultados, etc. E, ingressei 
-                      na Vivo como estagiário, no cargo de desenvolvedor. Trabalhando com backend e frontend, alcançando outro objetivo de ser fullstack e trabalhando em projetos
-                      importantes para nossa área <a href="/projetos#vivo" className="text-sky-500 animate-pulse font-bold">(visualizar)</a>.
+                    <p id="conclusao" className={clsx("hover:leading-loose hover:scale-105 hover:font-medium transition-all", activeSection === 'conclusao' && 'animate-blink-once ')}>
+                      Resiliência, dedicação e foco são os pilares da minha trajetória. Sou grato por tudo o que conquistei até aqui e ansioso para continuar 
+                      crescendo, aprimorando minhas habilidades e, no futuro, me tornar um grande líder de equipe.
                     </p>
 
-                    <p id="objetivo" className="hover:leading-loose hover:scale-105 hover:font-medium transition-all">
-                      Sou grato pelo caminho percorrido e por ter feito minha transição de carreira dar certo. Agora busco novos horizontes, aprimorar habilidades e, 
-                      no futuro, me tornar um grande líder de equipe.
-                    </p>
                   </div>
                 </div>
 
@@ -103,3 +106,5 @@ export default function Page() {
     </>
   );
 }
+
+

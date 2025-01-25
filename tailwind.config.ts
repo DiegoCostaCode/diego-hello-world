@@ -8,6 +8,15 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        'blink': {
+          '50%': { backgroundColor: '#1f1f1f' },
+          '100%': { backgroundColor: '#151515' },
+        },
+      },
+      animation: {
+        'blink-once': 'blink 1s ease-in-out forwards',
+      },
       fontFamily: {
         fira: ['"Fira Code"', 'monospace'],
         roboto: ['Roboto', 'sans-serif'], 
@@ -16,6 +25,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         'white': '#ffffff',
+        'deep-dark': '#0a0a0a',
         'black': '#181818',	
         'dark-gray': '#181818',
         'soft-black': '#121212'

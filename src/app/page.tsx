@@ -32,11 +32,11 @@ export default function Home() {
             <section className="flex flex-col items h-full mb-52 mt-10">
               <div className="mb-10 cursor-default text-xl text-center">
                 <p className=" my-6 w-full text-zinc-300">
-                  Sou apaixonado pelo que faço e sempre busco me aprimorar. Desafios me motivam, e acredito no poder das ideias compartilhadas. Valorizo o trabalho em equipe.
+                  <u>Sou apaixonado pelo que faço</u> e estou sempre em busco de me aprimorar. Desafios me motivam, e acredito no poder das ideias compartilhadas. Valorizo o trabalho em equipe.
                 </p>
                 <p className=" my-6 text-zinc-300 w-full">
                   Atualmente, estou no último semestre do curso de Análise e Desenvolvimento de Sistemas na <a href="https://www.fiap.com.br" className="text-sky-500 animate-pulse font-bold">FIAP</a> - bolsa integral,
-                   com previsão de formatura para agosto deste ano. Minha média de notas é <strong className="text-white">8,24</strong>.
+                   com previsão de formatura para agosto deste ano. Minha média de notas é <strong className="text-white"><u>8,24</u></strong>.
                 </p>
               </div>
               <hr className="border-1 border-dark-gray" />
@@ -46,7 +46,7 @@ export default function Home() {
                   <div className="flex flex-wrap justify-center gap-6 w-full text-justify my-6 text-zinc-300">
                         <Card 
                         title="🐍Python" 
-                        description="Orientado a objetos, criação de API nível REST com Flask, e scripts para automação, threads agendadas, e web scraping."
+                        description="Orientado a objetos, criação de API nível REST com Flask, e scripts para automação, threads agendadas, e web scraping. Análise de dados, e A.I."
                         />
                    
                         <Card 
@@ -63,14 +63,14 @@ export default function Home() {
           
           
                         <Card 
-                        title="Desenvolvimento Web💻" 
-                        description="Criação de interfaces modernas, responsavias e intuitivas, foco em minimalismo. Utilizo frameworks como Angular e Next.js, estilizando com Tailwind." 
+                        title="Desenvolvimento Web🌐" 
+                        description="Criação de interfaces modernas, intuitivas e responsivas. Utilizo frameworks como Angular e Next.js, proficiência em Tailwind, CSS, Type ou Javascript, e uso de componentes reutilizáveis." 
                         />
              
                     
                         <Card 
-                        title="🛠️Docker & VMs" 
-                        description="Criação de docker-filer e docker-compose, criação de VMs na Azure, para deploy de aplicações." 
+                        title="🐋Docker & VMs" 
+                        description="Criação de dockerfiles, docker-compose, e configuração de VMs para deploy de aplicações."
                         />
              
                   <div className="flex w-full justify-center gap-6 m-10">
